@@ -67,3 +67,29 @@ let availProducts = products.filter((product) => {
 });
 console.log("Available Products");
 console.log(availProducts);
+
+// Small Bookify Task
+// ==================
+let books = [
+  { id: 1, bookName: "JS Notes", author: "Sami", pages: 400, price: 500 },
+  { id: 2, bookName: "CSS Notes", author: "Gokul", pages: 300, price: 400 },
+  { id: 3, bookName: "React Notes", author: "Logu", pages: 200, price: 700 },
+  { id: 4, bookName: "Node Notes", author: "Vino", pages: 500, price: 500 },
+  { id: 5, bookName: "Express Notes", author: "Sri", pages: 700, price: 600 },
+];
+
+// Filter Books by ID
+let bookID = books.filter((book) => {
+  return book.id === 4;
+});
+console.log(bookID);
+
+// Filter Books Price more than 500
+let bookRate = books.filter((book) => book.price > 500);
+console.log(bookRate);
+
+// Filter and Showing Books Names Only those price more than 500
+let bookName = books
+  .filter((book) => book.price > 500)
+  .map((book) => book.bookName);
+console.log(bookName);
